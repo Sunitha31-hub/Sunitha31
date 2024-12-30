@@ -1,0 +1,138 @@
+/* Full-screen layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+  }
+  
+  #root {
+    height: 100%;
+  }
+  
+  /* Main container */
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+  }
+  
+  /* Search container */
+  .news-search {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Input styles */
+  .news-search input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .news-search input:focus {
+    border-color: #6c63ff; /* Focus color */
+  }
+  
+  /* Button styles */
+  .news-search button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #6c63ff; /* Button color */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .news-search button:hover {
+    background-color: #574bff; /* Hover color */
+    transform: translateY(-2px); /* Slight lift on hover */
+  }
+  
+  .news-search button:active {
+    transform: translateY(1px); /* Slight dip when button is pressed */
+  }
+  
+  /* Articles section */
+  .articles {
+    width: 100%;
+    padding: 20px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .article {
+    width: 100%;
+    max-width: 600px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .article:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Article title */
+  .article h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Article description */
+  .article p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 5px;
+  }
+  
+  /* Additional styles for responsiveness */
+  @media screen and (max-width: 768px) {
+    .news-search {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .news-search input, .news-search button {
+      font-size: 14px;
+    }
+  
+    .articles {
+      width: 90%;
+    }
+  
+    .article {
+      width: 90%;
+    }
+  }
+  
